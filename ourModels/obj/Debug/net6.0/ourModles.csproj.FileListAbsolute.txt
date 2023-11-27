@@ -1,0 +1,12 @@
+D:\תשפד\webapi\ourProject\ourModels\bin\Debug\net6.0\ourModles.deps.json
+D:\תשפד\webapi\ourProject\ourModels\bin\Debug\net6.0\ourModles.dll
+D:\תשפד\webapi\ourProject\ourModels\bin\Debug\net6.0\ourModles.pdb
+D:\תשפד\webapi\ourProject\ourModels\obj\Debug\net6.0\ourModles.csproj.AssemblyReference.cache
+D:\תשפד\webapi\ourProject\ourModels\obj\Debug\net6.0\ourModles.GeneratedMSBuildEditorConfig.editorconfig
+D:\תשפד\webapi\ourProject\ourModels\obj\Debug\net6.0\ourModles.AssemblyInfoInputs.cache
+D:\תשפד\webapi\ourProject\ourModels\obj\Debug\net6.0\ourModles.AssemblyInfo.cs
+D:\תשפד\webapi\ourProject\ourModels\obj\Debug\net6.0\ourModles.csproj.CoreCompileInputs.cache
+D:\תשפד\webapi\ourProject\ourModels\obj\Debug\net6.0\ourModles.dll
+D:\תשפד\webapi\ourProject\ourModels\obj\Debug\net6.0\refint\ourModles.dll
+D:\תשפד\webapi\ourProject\ourModels\obj\Debug\net6.0\ourModles.pdb
+D:\תשפד\webapi\ourProject\ourModels\obj\Debug\net6.0\ref\ourModles.dll
