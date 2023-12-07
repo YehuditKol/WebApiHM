@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ourProject.ourModels.Interfaces;
 using ourProject.ourModels.models;
+using System.Text.Json; 
 
 namespace ourProject.pizzaProject.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    // [Authorize(Policy = "Admin")]
     public class WorkerController :ControllerBase
     {
         private IWorkerService _workerService;

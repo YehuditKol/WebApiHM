@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using ourProject.ourModels.Interfaces;
 using ourProject.ourModels.models;
 
@@ -8,11 +7,12 @@ namespace ourProject.pizzaProject.Controllers;
 [Route("api/[controller]")]
 public class PizzaController : ControllerBase
 {
+
     private IPizza _pizzaService;
     public PizzaController(IPizza pizzaService)
     {
         _pizzaService = pizzaService;
-        _pizzaService.createDate=DateTime.Now;
+        _pizzaService.createDate = DateTime.Now;
         Console.WriteLine(_pizzaService.createDate);
     }
 
@@ -26,7 +26,7 @@ public class PizzaController : ControllerBase
     [Route("getName")]
     public IActionResult Getstring(int id)
     {
-        var pizzaName=_pizzaService.Getstring(id);
+        var pizzaName = _pizzaService.Getstring(id);
         return pizzaName != null ? Ok(pizzaName) : NotFound();
     }
 
@@ -35,7 +35,7 @@ public class PizzaController : ControllerBase
     public ActionResult<Pizza> GetById(int id)
     {
         var pizza = _pizzaService.GetById(id);
-        if (pizza==null) 
+        if (pizza == null)
             return NotFound();
 
         return pizza;
@@ -43,26 +43,29 @@ public class PizzaController : ControllerBase
 
 
     [HttpPost]
+    // [Authorize(Policy = "SuperWorker")]
     public ActionResult Post(Pizza pizza)
     {
         _pizzaService.Add(pizza);
         return Ok();
-
     }
 
 
-    [HttpPut]
+    [HttpPut("{id}")]
+
+    //  [Authorize(Policy = "SuperWorker")]
     public ActionResult Put(int id, Pizza pizza)
     {
-       var isPizzaUpdate=_pizzaService.Update(id, pizza);
-       if(isPizzaUpdate)
+        var isPizzaUpdate = _pizzaService.Update(id, pizza);
+        if (isPizzaUpdate)
             return Ok();
-       return NotFound();
+        return NotFound();
     }
 
 
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
+    //  [Authorize(Policy = "SuperWorker")]
     public ActionResult Delete(int id)
     {
         _pizzaService.Delete(id);

@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pizzaProject", "pizzaProject.csproj", "{A24FBA2D-0E36-486B-B8B5-31E6DF97700B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ourServices", "..\ourServices\ourServices.csproj", "{0EF73D94-4848-4F4B-A62F-C9BA1396A3AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileService", "..\FileService\FileService.csproj", "{0ED012BD-54AD-47F6-93AA-DEF62B81CCF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A24FBA2D-0E36-486B-B8B5-31E6DF97700B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A24FBA2D-0E36-486B-B8B5-31E6DF97700B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A24FBA2D-0E36-486B-B8B5-31E6DF97700B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF73D94-4848-4F4B-A62F-C9BA1396A3AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF73D94-4848-4F4B-A62F-C9BA1396A3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF73D94-4848-4F4B-A62F-C9BA1396A3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF73D94-4848-4F4B-A62F-C9BA1396A3AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED012BD-54AD-47F6-93AA-DEF62B81CCF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED012BD-54AD-47F6-93AA-DEF62B81CCF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED012BD-54AD-47F6-93AA-DEF62B81CCF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED012BD-54AD-47F6-93AA-DEF62B81CCF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

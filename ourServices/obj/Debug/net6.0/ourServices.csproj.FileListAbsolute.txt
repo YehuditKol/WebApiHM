@@ -1,5 +1,0 @@
-D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.csproj.AssemblyReference.cache
-D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.GeneratedMSBuildEditorConfig.editorconfig
-D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.AssemblyInfoInputs.cache
-D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.AssemblyInfo.cs
-D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.csproj.CoreCompileInputs.cache
