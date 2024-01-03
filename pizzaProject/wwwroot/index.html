@@ -3,40 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza</title>
+    <title>Document</title>
 </head>
-<link rel="stylesheet" href="./client.css">
 <body>
- 
-    <div id="b">
-    <button class="button" onclick="getAllPizzas()">Get</button>
-    <button class="button" onclick="getById()">GetById</button>
-    <button class="button" onclick="post()">Post</button>
-    <button class="button" onclick="putPizza()">Change-Pizza</button>
-    <button class="button" onclick="deletePizza()">Delete</button>
-    
-   </div>
-   <table id="tb">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>IS gluten Free</th>
-        </tr>
-    </thead>
-   <tbody id="pizzatbody">
-           
-   </tbody>
-</table>
-
-<input type="text" id="idForGet">
-<input type="text" placeholder="name" id="name">
-<input type="text" placeholder="id" id="id">
-<input type="text" placeholder="gluten" id="gluten">
-<button class="btn btn-outline-secondary" type="submit" id="send" onclick="sendPost()">Send</button>
-<button class="btn btn-outline-secondary" type="submit" id="execute" onclick="executeForGetById()">ExecuteForGetById</button>
-<input type="text" id="idDelete" placeholder="idDelete">
-<button class="btn btn-outline-secondary" type="submit" id="executeD" onclick="fexecuteDelete()">executeDelete</button>
+    <form action="javascript:void(0);" id="formLogIn" method="POST" onsubmit="Login()">
+        <input type="text" id="name" name="name" placeholder="Name">
+        <input type="text" id="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+    </form>
 </body>
-<script src="./client.js"></script>
+<script src="./login.js"></script>
 </html>

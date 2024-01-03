@@ -7,7 +7,8 @@ namespace ourProject.FileService
 {
     public interface Ifile
     {
-        public string FilePath { get; set; }
+         public string FileName { get; set; }
+         //private string FilePath { get; set; }
        
          public void WriteMessage(string message);
           public void AddItem<T>(T item);

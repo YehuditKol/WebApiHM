@@ -1,0 +1,17 @@
+D:\תשפד\webapi\ourProject\ourServices\bin\Debug\net6.0\ourServices.deps.json
+D:\תשפד\webapi\ourProject\ourServices\bin\Debug\net6.0\ourServices.dll
+D:\תשפד\webapi\ourProject\ourServices\bin\Debug\net6.0\ourServices.pdb
+D:\תשפד\webapi\ourProject\ourServices\bin\Debug\net6.0\FileService.dll
+D:\תשפד\webapi\ourProject\ourServices\bin\Debug\net6.0\ourModles.dll
+D:\תשפד\webapi\ourProject\ourServices\bin\Debug\net6.0\FileService.pdb
+D:\תשפד\webapi\ourProject\ourServices\bin\Debug\net6.0\ourModles.pdb
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.csproj.AssemblyReference.cache
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.AssemblyInfoInputs.cache
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.AssemblyInfo.cs
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.csproj.CoreCompileInputs.cache
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.csproj.CopyComplete
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.dll
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\refint\ourServices.dll
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ourServices.pdb
+D:\תשפד\webapi\ourProject\ourServices\obj\Debug\net6.0\ref\ourServices.dll

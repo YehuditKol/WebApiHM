@@ -1,12 +1,13 @@
 ﻿namespace ourProject.ourModels.models
 {
-    public interface Worker
+    public class Worker
     {
 
         public int Id { get; set; }
         public string Name { get; set; }
        
-        public int Password { get; set; }
+        public string Password { get; set; }
         public string Role { get; set; }
+
     }
 }

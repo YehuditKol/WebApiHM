@@ -28,6 +28,7 @@ namespace ourProject.ourServices
         public PizzaService(Ifile fileService)
         {
             _fileService = fileService;
+            _fileService.FileName = "myFile.json";
             pizzas =  _fileService.Get<Pizza>();
         }
         public List<Pizza> Get()
@@ -53,6 +54,7 @@ namespace ourProject.ourServices
 
         public void Add(Pizza pizza)
         {
+            _fileService.FileName = "myFile.json";
             _fileService.AddItem<Pizza>(pizza);
             // pizzas.Add(new Pizza() { Gluten = pizza.Gluten, Id = pizza.Id, Name = pizza.Name });
         }

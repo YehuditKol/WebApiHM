@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ourProject.ourModels.Interfaces;
 using ourProject.ourModels.models;
@@ -43,7 +44,8 @@ public class PizzaController : ControllerBase
 
 
     [HttpPost]
-    // [Authorize(Policy = "SuperWorker")]
+
+    [Authorize(Policy = "SuperWorker")]
     public ActionResult Post(Pizza pizza)
     {
         _pizzaService.Add(pizza);
@@ -53,7 +55,7 @@ public class PizzaController : ControllerBase
 
     [HttpPut("{id}")]
 
-    //  [Authorize(Policy = "SuperWorker")]
+    [Authorize(Policy = "SuperWorker")]
     public ActionResult Put(int id, Pizza pizza)
     {
         var isPizzaUpdate = _pizzaService.Update(id, pizza);
@@ -65,7 +67,7 @@ public class PizzaController : ControllerBase
 
 
     [HttpDelete("{id}")]
-    //  [Authorize(Policy = "SuperWorker")]
+     [Authorize(Policy = "SuperWorker")]
     public ActionResult Delete(int id)
     {
         _pizzaService.Delete(id);

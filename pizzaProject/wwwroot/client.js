@@ -63,11 +63,14 @@ function post(){
 function sendPost(){
     const namev=name1.value.trim();
     const idv=id.value.trim();
-    const glutenv=gluten.value.trim();
-    var myHeaders = new Headers();
+    const glutenv = gluten.value.trim();
+    const token = sessionStorage.getItem("token");
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization","Bearer " + token);
     myHeaders.append("Content-Type", "application/json");
-    let json = `{\"name\": \" ${namev}\", \"gluten\": \ ${glutenv}\,\"id\": \ ${idv}\}`;
-    var requestOptions = {
+
+    const json = `{\"name\": \" ${namev}\", \"gluten\": \ ${glutenv}\,\"id\": \ ${idv}\}`;
+    const requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: json,
@@ -109,8 +112,10 @@ function deletePizza()
 }
 function fexecuteDelete()
 {
-    let idValue=idDelete.value.trim();
+    let idValue = idDelete.value.trim();
+    const token = sessionStorage.getItem("token");
     var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Bearer " + token);
     myHeaders.append("Content-Type", "application/json");
  
     //let id = `${idValue}`;
@@ -160,7 +165,10 @@ function sendPutPizza(){
     const id=document.getElementById("myInput").value.trim();
     const namePizza=document.getElementById("myName").value.trim();
     const idPizza=document.getElementById("myId").value.trim();
-    const glutenPizza=document.getElementById("myGluten").value.trim();
+    const glutenPizza = document.getElementById("myGluten").value.trim();
+    const token = sessionStorage.getItem("token");
+
+    myHeaders.append("Authorization", "Bearer " + token);
     var myHeaders = new Headers();
      myHeaders.append("Content-Type", "application/json");
 

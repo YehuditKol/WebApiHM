@@ -1,0 +1,12 @@
+D:\תשפד\webapi\ourProject\FileService\bin\Debug\net6.0\FileService.deps.json
+D:\תשפד\webapi\ourProject\FileService\bin\Debug\net6.0\FileService.dll
+D:\תשפד\webapi\ourProject\FileService\bin\Debug\net6.0\FileService.pdb
+D:\תשפד\webapi\ourProject\FileService\obj\Debug\net6.0\FileService.csproj.AssemblyReference.cache
+D:\תשפד\webapi\ourProject\FileService\obj\Debug\net6.0\FileService.GeneratedMSBuildEditorConfig.editorconfig
+D:\תשפד\webapi\ourProject\FileService\obj\Debug\net6.0\FileService.AssemblyInfoInputs.cache
+D:\תשפד\webapi\ourProject\FileService\obj\Debug\net6.0\FileService.AssemblyInfo.cs
+D:\תשפד\webapi\ourProject\FileService\obj\Debug\net6.0\FileService.csproj.CoreCompileInputs.cache
+D:\תשפד\webapi\ourProject\FileService\obj\Debug\net6.0\FileService.dll
+D:\תשפד\webapi\ourProject\FileService\obj\Debug\net6.0\refint\FileService.dll
+D:\תשפד\webapi\ourProject\FileService\obj\Debug\net6.0\FileService.pdb
+D:\תשפד\webapi\ourProject\FileService\obj\Debug\net6.0\ref\FileService.dll
