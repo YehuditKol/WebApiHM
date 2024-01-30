@@ -20,7 +20,7 @@ namespace ourProject.FileService
         public void WriteMessage(string message)
         {
 
-            if (File.Exists(Path.Combine(FilePath,FileName)))
+            //if (File.Exists(Path.Combine(FilePath,FileName)))
             {
                 File.WriteAllText(Path.Combine(FilePath, FileName), $" {message}");
             }

@@ -39,3 +39,13 @@
 #executeD{
     display: none;
 }
+/*#orderButton,#workerButtons {
+    display: none;
+}*/
+/* for worker */
+#inWorkerId{
+    display: none;
+}
+#btnWorkerId{
+    display: none;
+}

@@ -37,6 +37,7 @@ namespace ourProject.ourServices
         }
         public void Add(Worker worker){
             _fileService.AddItem<Worker>(worker);
+            SetWorkers(_fileService.Get<Worker>());
         }
         public bool Update(int id,Worker worker)
         {
@@ -46,6 +47,7 @@ namespace ourProject.ourServices
                 existWorker.Id = worker.Id;
                 existWorker.Name = worker.Name;
                 _fileService.Update(GetWorkers());
+                SetWorkers(_fileService.Get<Worker>());
                 return true;
             }
             return false;

@@ -15,13 +15,9 @@ using pizzaProject.Extensions;
 using System.Text;
 
 
-// using ourProject.pizzaProject.Extensions;
-
-
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 
 
 
@@ -39,11 +35,10 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization(cfg =>
 {
-    //cfg.AddPolicy("Admin", policy => policy.RequireClaim("role", "Admin"));
+   
     cfg.AddPolicy("Admin", policy => policy.RequireClaim("UserType", "Admin"));
     cfg.AddPolicy("SuperWorker", policy => policy.RequireClaim("UserType", "SuperWorker"));
-    //cfg.AddPolicy("ClearanceLevel1", policy => policy.RequireClaim("ClearanceLevel", "1", "2"));
-    //cfg.AddPolicy("ClearanceLevel2", policy => policy.RequireClaim("ClearanceLevel", "2"));
+
 });
 
 builder.Services.AddEndpointsApiExplorer();
@@ -76,19 +71,6 @@ builder.Services.AddSingleton<Ifile, FileService>();
 builder.Services.AddSingleton<ILog, LogService>();
 builder.Services.AddScoped<Iidentity, IdentityService>();
 
-//builder.Services.AddAuthentication(options =>
-//    {
-//        options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-//    }).AddJwtBearer(cfg =>
-//        {
-//            cfg.RequireHttpsMetadata = false;
-//            cfg.TokenValidationParameters = IdentityService.GetTokenValidationParameters();
-//        });
-
-
-
-
-
 var app = builder.Build();
 
 app.UseDefaultFiles();
@@ -96,26 +78,28 @@ app.UseStaticFiles();
 
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+   
+//}
 
 
 app.UseErrorHandler();
+if (app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/api/Errors/error-development");
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+else
+{
+    app.UseExceptionHandler("/api/Errors/error");
+}
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseExceptionHandler("/error-development");
-//}
-//else
-//{
-//    app.UseExceptionHandler("/error");
-//}
+
 
 
 

@@ -41,3 +41,7 @@ D:\תשפד\webapi\ourProject\pizzaProject\obj\Debug\net6.0\refint\pizzaProject.
 D:\תשפד\webapi\ourProject\pizzaProject\obj\Debug\net6.0\pizzaProject.pdb
 D:\תשפד\webapi\ourProject\pizzaProject\obj\Debug\net6.0\pizzaProject.genruntimeconfig.cache
 D:\תשפד\webapi\ourProject\pizzaProject\obj\Debug\net6.0\ref\pizzaProject.dll
+D:\תשפד\webapi\ourProject\pizzaProject\bin\Debug\net6.0\files\emails\2.json
+D:\תשפד\webapi\ourProject\pizzaProject\bin\Debug\net6.0\files\emails\3.json
+D:\תשפד\webapi\ourProject\pizzaProject\bin\Debug\net6.0\files\emails\4.json
+D:\תשפד\webapi\ourProject\pizzaProject\bin\Debug\net6.0\files\emails\1.json

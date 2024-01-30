@@ -9,18 +9,18 @@ namespace ourProject.pizzaProject.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Authorize(Policy = "Admin")]
-    public class WorkerController :ControllerBase
+    public class WorkerController : ControllerBase
     {
         private IWorkerService _workerService;
         public WorkerController(IWorkerService workerService)
         {
             _workerService = workerService;
-            _workerService.createDate= DateTime.Now;
+            _workerService.createDate = DateTime.Now;
             Console.WriteLine(_workerService.createDate);
         }
 
-        [HttpGet]
-        [Route("getName")]
+        [HttpPut]
+        [Route("getName/{id}")]
         public ActionResult Get(int id)
         {
             var name=_workerService.NameOf(id);
@@ -35,9 +35,9 @@ namespace ourProject.pizzaProject.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id,Worker worker)
+        public IActionResult Put(int id, Worker worker)
         {
-          var isworkerService = _workerService.Update(id,worker);
+            var isworkerService = _workerService.Update(id, worker);
             if (isworkerService)
                 return Ok();
             return NotFound();

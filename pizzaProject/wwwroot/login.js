@@ -1,3 +1,4 @@
+
 const url = 'api/Login';
 
 function Login() {
@@ -22,18 +23,25 @@ function Login() {
     fetch(`${url}/Login`, requestOptions)
         .then((response) => response.text())
         .then((result) => {
-            //if (result.include("dfghjkl")) {
-            //    name.value = "";
-            //    password.value = "";
-            //    alert("not exist!!")
-            //} else {
+            if (result.includes("Unauthorized"))
+            {
+                name.value = "";
+                password.value = "";
+                alert("not exist!!")
+              
+            }
+            else
+            {
+               
                 token = result;
-                //sessionStorage.setItem("name", name);
-                //sessionStorage.setItem("password", password);
-                sessionStorage.setItem("token", token)
+                sessionStorage.setItem("name", name);
+                sessionStorage.setItem("password", password);
+                sessionStorage.setItem("token", token);
+                //var decoded = jwt_decode(token);
+                //console.log(decoded);
                 location.href = "home.html";
-
-            //}
+            }
         }).catch((error) => alert("error", error));
 
+    
 }

@@ -1,6 +1,8 @@
 
-let basicUrl='https://localhost:7170/api/Pizza/';
-
+let basicUrl = 'https://localhost:7170/api/Pizza/';
+let basicUrlOrder = 'https://localhost:7170/api/Order/';
+let basicUrlWorker = 'https://localhost:7170/api/Worker/';
+//client-pizzaService
 function getAllPizzas() {
     fetch(`${basicUrl}`)
     .then((res) => res.json()) 
@@ -9,19 +11,11 @@ function getAllPizzas() {
     .catch(err=>{console.log(err)})
 }
 function fillPizzaList(pizzaList) {
-    
+    document.getElementById("pizzatbody").innerHTML="";
     var tbody = document.getElementById('pizzatbody');
     var tb = document.getElementById("tb");
-    // let thead=tb.createTHead();
-    // tb.append(thead);
-    // let tr=thead.insertRow();
-    // let th1 = document.createElement("th");
-    // let th2 = document.createElement("th");
-    // th1.innerHTML="Name";
-    // th2.innerHTML="IsGluten";
-    // tr.append(th1);
-    // tr.append(th2);
-    // thead.append(tr);
+  
+   
     pizzaList.forEach(pizza => {
         var tr=tb.insertRow();
         var td3=tr.insertCell();
@@ -29,7 +23,7 @@ function fillPizzaList(pizzaList) {
         var td2=tr.insertCell();
         td3.append(`${pizza.id}`);
         td.append(`${pizza.name}`);
-        td2.append(`${pizza.gluten}`)
+        td2.append(`${pizza.gluten}`);
         td.style.border = '1px solid black';
         td2.style.border = '1px solid black';
         td3.style.border = '1px solid black';
@@ -80,10 +74,10 @@ function sendPost(){
     .then((response) => response.text())
     .then((result)=>{
         if(result.includes("400")){
-            alert("faild to add!!")
+            alert("faild to add!!");
         }
         else{
-            alert("wowwwwwwwwwwwwwwwwwwwwwwww");
+            alert("the pizza was added successfully!!");
         }
     })
     .catch(err=>{console.log(err)})
@@ -167,9 +161,8 @@ function sendPutPizza(){
     const idPizza=document.getElementById("myId").value.trim();
     const glutenPizza = document.getElementById("myGluten").value.trim();
     const token = sessionStorage.getItem("token");
-
-    myHeaders.append("Authorization", "Bearer " + token);
     var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Bearer " + token);
      myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
@@ -190,5 +183,21 @@ fetch(`${basicUrl}${id}`, requestOptions)
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 }
+//client-workerService
+const inWorkerId=document.getElementById("inWorkerId");
+function getWorker()
+{
+    const btnWorkerId=document.getElementById("btnWorkerId");
+    btnWorkerId.style.display="block";
+    inWorkerId.style.display="block";
 
+}
+function executeGetWorker(){
+    let idValue=inWorkerId.value.trim();
+    fetch(`${basicUrlWorker}getName/${idValue}`)
+    .then((res) => res.json()) 
+    .then((data) => console.log(data)) 
+    .catch(err=>{console.log(err)})
+}
+//client-orderService
 

@@ -56,7 +56,8 @@ namespace ourProject.ourServices
         {
             _fileService.FileName = "myFile.json";
             _fileService.AddItem<Pizza>(pizza);
-            // pizzas.Add(new Pizza() { Gluten = pizza.Gluten, Id = pizza.Id, Name = pizza.Name });
+            pizzas = _fileService.Get<Pizza>();
+           
         }
 
         public bool Update(int id, Pizza pizza)
@@ -69,6 +70,7 @@ namespace ourProject.ourServices
                 pizzas[index].Gluten = pizza.Gluten;
 
                 _fileService.Update(pizzas);
+                pizzas = _fileService.Get<Pizza>();
                 return true;
             }
             return false;
@@ -79,6 +81,7 @@ namespace ourProject.ourServices
             var existPizza = pizzas.FirstOrDefault(pizza => pizza.Id == id);
             if (existPizza != null) pizzas.Remove(existPizza);
             _fileService.Update(pizzas);
+            pizzas = _fileService.Get<Pizza>();
         }
     }
 }

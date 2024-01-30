@@ -16,7 +16,7 @@ namespace pizzaProject.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class LoginController : Controller
+    public class LoginController : ControllerBase
     {
 
         private Iidentity _identityService;
