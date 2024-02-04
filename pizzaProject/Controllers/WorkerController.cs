@@ -19,8 +19,7 @@ namespace ourProject.pizzaProject.Controllers
             Console.WriteLine(_workerService.createDate);
         }
 
-        [HttpPut]
-        [Route("getName/{id}")]
+        [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
             var name=_workerService.NameOf(id);

@@ -3,6 +3,7 @@ let basicUrl = 'https://localhost:7170/api/Pizza/';
 let basicUrlOrder = 'https://localhost:7170/api/Order/';
 let basicUrlWorker = 'https://localhost:7170/api/Worker/';
 //client-pizzaService
+//get
 function getAllPizzas() {
     fetch(`${basicUrl}`)
     .then((res) => res.json()) 
@@ -10,12 +11,11 @@ function getAllPizzas() {
 
     .catch(err=>{console.log(err)})
 }
+//get-draw table
 function fillPizzaList(pizzaList) {
     document.getElementById("pizzatbody").innerHTML="";
     var tbody = document.getElementById('pizzatbody');
     var tb = document.getElementById("tb");
-  
-   
     pizzaList.forEach(pizza => {
         var tr=tb.insertRow();
         var td3=tr.insertCell();
@@ -31,20 +31,10 @@ function fillPizzaList(pizzaList) {
         tr.append(td);
         tr.append(td2);
         tbody.append(tr);
-      
-       
     });
     tb.setAttribute("border", "2");
 }
-
-function getPizzaById() {
-    fetch(`${basicUrl}`)
-    .then((res) => res.json()) 
-    .then((data) =>  fillPizzaList(data)) 
-
-    .catch(err=>{console.log(err)})
-}
-
+//buttons-post
 const name1=document.getElementById("name");
 const id=document.getElementById("id");
 const gluten=document.getElementById("gluten");
@@ -82,6 +72,7 @@ function sendPost(){
     })
     .catch(err=>{console.log(err)})
 }
+//input for get by id
 const idGet=document.getElementById("idForGet");
 
 function getById(){
@@ -96,6 +87,7 @@ function executeForGetById(){
     .then((data) => console.log(data)) 
     .catch(err=>{console.log(err)})
 }
+//input for delete pizza
 const executeDelete=document.getElementById("idDelete");
 function deletePizza()
 {
@@ -124,6 +116,7 @@ function fexecuteDelete()
     .then((data) => console.log(data)) 
     .catch(err=>{console.log(err)})
 }
+//put pizza
 function putPizza(){
     const input = document.createElement("input");
     const input1 = document.createElement("input");
@@ -194,10 +187,21 @@ function getWorker()
 }
 function executeGetWorker(){
     let idValue=inWorkerId.value.trim();
-    fetch(`${basicUrlWorker}getName/${idValue}`)
-    .then((res) => res.json()) 
+    const token = sessionStorage.getItem("token");
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization","Bearer " + token);
+    myHeaders.append("Content-Type", "application/json");
+
+    const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow",
+    };
+    fetch(`${basicUrlWorker}${idValue}`,requestOptions)
+    .then((res) => res.text()) 
     .then((data) => console.log(data)) 
     .catch(err=>{console.log(err)})
 }
 //client-orderService
+
 
